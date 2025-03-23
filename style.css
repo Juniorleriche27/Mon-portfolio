@@ -196,8 +196,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 15px;
-    position: fixed;
+    padding: 1px;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -372,4 +372,30 @@ section .btn:hover {
 .project:hover {
     transform: scale(1.05);  /* Effet de zoom léger au survol */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Ajout d'une ombre */
+}
+
+
+
+
+
+#apropos {
+    display: flex;
+    flex-direction: column; /* Permet d'afficher le titre au-dessus */
+}
+
+#apropos-content {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Espace entre texte et image */
+}
+
+.apropos-text {
+    width: 60%; /* Ajuste la largeur du texte */
+}
+
+.apropos-image img {
+    width: 300px; /* Taille de l'image */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis (facultatif) */
+    margin-top: -50px; /* Ajuste la valeur pour monter plus ou moins */
 }
