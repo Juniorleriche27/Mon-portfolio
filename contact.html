@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LAMADOKOU Yayra (Juniorleriche)</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur mon portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="interets.html">Centres d’intérêts</a></li>
+                <li><a href="sports.html">Activités sportives</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h1>Contactez-moi</h1>
+    
+        <p>Si vous souhaitez discuter de projets, poser des questions, ou simplement entrer en contact avec moi, n'hésitez pas à utiliser les informations ci-dessous.</p>
+    
+        <h2>📧 Email</h2>
+        <p>Vous pouvez me contacter par email à l'adresse suivante : <a href="mailto:ylamadokou@gmail.com">ylamadokou@gmail.com</a></p>
+    
+        <h2>📱 WhatsApp</h2>
+        <p>Mon numéro WhatsApp est le : <a href="https://wa.me/22899159953">+228 99 15 99 53</a></p>
+    
+        <h2>🔵 Facebook</h2>
+        <p>Vous pouvez également me trouver sur Facebook : <a href="https://www.facebook.com/Lamadokou.yayra.junior">Lamadokou Yayra Junior</a></p>
+    
+        <h2>📬 Formulaire de Contact</h2>
+        <p>Vous pouvez aussi m'envoyer un message directement en remplissant le formulaire ci-dessous. Je m'efforcerai de répondre dans les plus brefs délais.</p>
+    
+        <form action="mailto:ylamadokou@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>© 2025 LAMADOKOU Yayra (Juniorleriche) - Portfolio personnel</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Empêche l'envoi du formulaire pour la validation
+    
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            let errorMessage = document.getElementById('error');
+    
+            if (name === "" || email === "" || message === "") {
+                errorMessage.textContent = "Tous les champs sont obligatoires.";
+                errorMessage.style.color = "red";
+            } else {
+                errorMessage.textContent = "Formulaire envoyé avec succès!";
+                errorMessage.style.color = "green";
+            }
+        });
+    </script>
+    </body>
+    
+
+</body>
+</html>
